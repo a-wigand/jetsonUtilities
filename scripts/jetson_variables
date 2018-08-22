@@ -139,10 +139,15 @@ else
     JETSON_OPENCV="NOT INSTALLED"
 fi
 
+# Read processor type
+JETSON_PROCESSOR_TYPE=$(uname -m)
+
 export JETSON_BOARD
 export JETSON_CUDA
 export JETSON_JETPACK
 export JETSON_L4T
+export JETSON_OPENCV
+export JETSON_PROCESSOR_TYPE
 
 # TODO Add enviroments variables:
 # - UID -> https://devtalk.nvidia.com/default/topic/996988/jetson-tk1/chip-uid/post/5100481/#5100481
@@ -150,4 +155,3 @@ export JETSON_L4T
 # - cuDNN
 # - TensorRT
 # - Visionworks
-
