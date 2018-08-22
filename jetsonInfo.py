@@ -63,8 +63,6 @@ else:
     print terminalColors.FAIL + "Error: Unable to find Ubuntu Version"  + terminalColors.ENDC
     print "Reason: Unable to find file /etc/os-release"
 
-
-
 # Kernel Release
 if os.path.exists('/proc/version'):
     with open("/proc/version","r") as versionFile:
@@ -75,4 +73,6 @@ else:
     print terminalColors.FAIL + "Error: Unable to find Linux kernel version"  + terminalColors.ENDC
     print "Reason: Unable to find file /proc/version"
 
-print " CUDA " + os.environ["JETSON_CUDA"].strip() 
+print " Processor Type: " + os.environ["JETSON_PROCESSOR_TYPE"].strip()
+print " CUDA: " + os.environ["JETSON_CUDA"].strip()
+print " OpenCV: " + os.environ["JETSON_OPENCV"].strip() 
